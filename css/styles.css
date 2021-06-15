@@ -14,14 +14,13 @@
   --padding-section: 94px;
   --primary-margin: 30px;
   --primary-margin-reverse: -30px;
-  --portfolio-button-list-padding: 295px;
   --portfolio-button-vertical-padding: 6px;
   --portfolio-button-horizontal-padding: 22px;
   --padding-footer-top-bottom: 60px;
   --flex-x3: calc((100% - 90px) / 3);
   --flex-x4: calc((100% - 120px) / 4);
-  --portfolio-list-item-padding: 24px;
-  --menu-height: 80px;
+  --portfolio-list-item-padding: 20px;
+  --menu-interval: 50px;
 }
 
 /*+++++++++++++ GLOBAL +++++++++++++*/
@@ -127,8 +126,9 @@ address {
 
 /*========== HEADER ==========*/
 .header {
-  height: var(--menu-height);
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .header-logo {
@@ -139,7 +139,6 @@ address {
 .menu-list,
 .navigation-contact {
   align-items: center;
-  height: var(--menu-height);
 }
 
 .menu-link,
@@ -163,12 +162,15 @@ address {
   color: var(--focus-colour);
 }
 
+.header-container {
+}
+
 .menu-contact-item:last-child {
-  margin-left: var(--menu-height);
+  margin-left: var(--menu-interval);
 }
 
 .menu-list > .menu-item:not(:last-child) {
-  margin-right: var(--menu-height);
+  margin-right: var(--menu-interval);
 }
 
 /*========== END HEADER ==========*/
@@ -180,9 +182,12 @@ address {
   padding-bottom: var(--padding-footer-top-bottom);
 }
 
+.address-footer {
+  margin-top: 20px;
+}
+
 .address-footer-list {
   flex-direction: column;
-  margin-top: 20px;
 }
 
 .address-footer-list > .address-footer-list-title:not(:last-child) {
@@ -208,8 +213,8 @@ address {
 /*========== HERO ==========*/
 .hero {
   background-color: var(--background-colour);
-  height: 600px;
   padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title,
@@ -228,7 +233,7 @@ address {
   text-transform: uppercase;
   margin-bottom: 30px;
   width: 696px;
-  height: 120px;
+  /* height: 120px;*/
 }
 
 .hero-button {
@@ -325,14 +330,14 @@ address {
 .command-list-item-title {
   font-weight: 500;
   line-height: 1.19;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  /*margin-top: 30px;
+  margin-bottom: 10px;*/
 }
 
 .command-list-item-text {
   line-height: 1.19;
   color: var(--seconary-colour);
-  margin-bottom: 30px;
+  /* margin-bottom: 30px;*/
 }
 
 .command-list {
@@ -341,22 +346,22 @@ address {
 }
 
 .command-list-item {
+  margin-left: var(--primary-margin);
+  margin-top: var(--primary-margin);
+  flex-basis: var(--flex-x4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background: #ffffff;
-  margin-left: var(--primary-margin);
-  margin-top: var(--primary-margin);
-  flex-basis: var(--flex-x4);
+}
+
+.command-title {
+  padding: 30px;
 }
 
 /*========== END COMMAND ==========*/
 
 /*========== PORTFOLIO BUTTON ==========*/
-.portfolio-button-list-item {
-  margin: 0px;
-  padding: 0px;
-}
 
 .portfolio-button {
   font-weight: 500;
@@ -370,17 +375,19 @@ address {
   padding-right: var(--portfolio-button-horizontal-padding);
   padding-top: var(--portfolio-button-vertical-padding);
   padding-bottom: var(--portfolio-button-vertical-padding);
+  /* border: 2px solid black;*/
   border: none;
 }
 
 .portfolio-button-list {
   margin-bottom: 50px;
-  padding-left: var(--portfolio-button-list-padding);
-  padding-right: var(--portfolio-button-list-padding);
-  justify-content: space-between;
+  /* padding-left: var(--portfolio-button-list-padding);
+  padding-right: var(--portfolio-button-list-padding);*/
+  /*justify-content: space-between;*/
+  justify-content: center;
 }
 
-.portfolio-button-list-item > .portfolio-button-list:not(:last-child) {
+.portfolio-button-list > .portfolio-button-list-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -406,7 +413,6 @@ address {
   font-size: var(--seconary-font-size);
   line-height: 1.88;
   color: var(--seconary-colour);
-  margin-bottom: 20px;
 }
 
 .portfolio-list-item {
@@ -419,12 +425,6 @@ address {
   margin-top: var(--primary-margin);
 }
 
-.portfolio-list-item-title,
-.portfolio-list-item-text {
-  padding-left: var(--portfolio-list-item-padding);
-  padding-right: var(--portfolio-list-item-padding);
-}
-
 .portfolio-list {
   margin-left: var(--primary-margin-reverse);
   margin-top: var(--primary-margin-reverse);
@@ -433,6 +433,7 @@ address {
 .border-to-image {
   border: 1px solid #eeeeee;
   border-top: 0px;
+  padding: var(--portfolio-list-item-padding);
 }
 
 /*========== END PORTFOLIO LIST ==========*/
