@@ -9,8 +9,10 @@
   --dark-text-colour: #ffffff;
   --hero-button-focus-colour: #188ce8;
   --button-background-colour: #f5f4fa;
+  --tripple-colour: #afb1b8;
   --primary-font-size: 14px;
   --seconary-font-size: 16px;
+  --title-font-size: 36px;
   --padding-section: 94px;
   --primary-margin: 30px;
   --primary-margin-reverse: -30px;
@@ -19,6 +21,7 @@
   --padding-footer-top-bottom: 60px;
   --flex-x3: calc((100% - 90px) / 3);
   --flex-x4: calc((100% - 120px) / 4);
+  --flex-x6: calc((100% - 180px) / 6);
   --portfolio-list-item-padding: 20px;
   --menu-interval: 50px;
 }
@@ -71,10 +74,11 @@ address {
 
 /*========== COMPONENTS ==========*/
 .title {
-  font-size: 36px;
+  font-size: var(--title-font-size);
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+  color: var(--main-colour);
 }
 
 .flex {
@@ -98,6 +102,34 @@ address {
   padding-bottom: var(--padding-section);
 }
 
+/*SOCIAL*/
+
+.social-list-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.social-list-item-link {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list-item-link:hover,
+.social-list-item-link:focus {
+  background-color: var(--focus-colour);
+}
+
+.social-list-item-link:hover .social-list-icon,
+.social-list-item-link:focus .social-list-icon {
+  fill: var(--dark-text-colour);
+}
+
+/*END SOCIAL*/
 /*========== END COMPONENTS ==========*/
 
 /*========== LOGO ==========*/
@@ -151,6 +183,7 @@ address {
 
 .navigation-contact {
   margin-left: auto;
+  align-items: center;
 }
 
 .menu-link:hover,
@@ -162,9 +195,6 @@ address {
   color: var(--focus-colour);
 }
 
-.header-container {
-}
-
 .menu-contact-item:last-child {
   margin-left: var(--menu-interval);
 }
@@ -173,13 +203,38 @@ address {
   margin-right: var(--menu-interval);
 }
 
+.contact-header-svg {
+  height: 12px;
+  fill: var(--seconary-colour);
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  /*border: 1px solid red;*/
+}
+
+.menu-contact {
+  /*border: 1px solid black;*/
+  display: flex;
+  align-items: center;
+}
+
+.mail-svg {
+  width: 16px;
+}
+
+.tel-svg {
+  width: 10px;
+}
+
+.menu-contact:hover .contact-header-svg,
+.menu-contact:focus .contact-header-svg {
+  fill: var(--focus-colour);
+}
 /*========== END HEADER ==========*/
 
 /*========== FOOTER ==========*/
 .footer {
   background-color: var(--background-colour);
-  padding-top: var(--padding-footer-top-bottom);
-  padding-bottom: var(--padding-footer-top-bottom);
 }
 
 .address-footer {
@@ -208,6 +263,41 @@ address {
   color: var(--footer-link-colour);
 }
 
+.footer-text-social {
+  font-family: Roboto, sans-serif;
+  font-size: var(--main-font);
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--dark-text-colour);
+  margin-bottom: 20px;
+}
+
+.footer-container > .footer-container-box:nth-child(1) {
+  margin-right: 70px;
+  padding-top: var(--padding-footer-top-bottom);
+  padding-bottom: var(--padding-footer-top-bottom);
+  /* border: 2px solid black;*/
+}
+
+.footer-container > .footer-container-box:nth-child(2) {
+  margin-right: 70px;
+  padding-top: 72px;
+  /* border: 2px solid white;*/
+}
+
+/*SOCIAL*/
+.social-list-footer > .social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-list-icon-footer {
+  fill: var(--dark-text-colour);
+}
+
+.social-list-item-link-footer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/*END SOCIAL*/
 /*========== END FOOTER ==========*/
 
 /*========== HERO ==========*/
@@ -215,6 +305,11 @@ address {
   background-color: var(--background-colour);
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/bg.jpg);
+  background-size: cover, 1600px;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .hero-title,
@@ -264,6 +359,14 @@ address {
 /*========== END HERO ==========*/
 
 /*========== FEATURES ==========*/
+
+.features-svg {
+  height: 120px;
+  width: 270px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--primary-margin);
+}
 
 .features-text {
   line-height: 1.71;
@@ -337,7 +440,7 @@ address {
 .command-list-item-text {
   line-height: 1.19;
   color: var(--seconary-colour);
-  /* margin-bottom: 30px;*/
+  margin-bottom: 16px;
 }
 
 .command-list {
@@ -358,8 +461,68 @@ address {
 .command-title {
   padding: 30px;
 }
+/*SOCIAL*/
+.social-list-command {
+  justify-content: space-between;
+}
 
+.social-list-icon-command {
+  fill: var(--tripple-colour);
+}
+
+.social-list-item-link-command {
+  background-color: var(--dark-text-colour);
+}
+/*END SOCIAL*/
 /*========== END COMMAND ==========*/
+
+/*========== CLIENTS ==========*/
+.clients-item {
+  margin-bottom: 50px;
+}
+
+.clients-list-link {
+  border: 1px solid var(--tripple-colour);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.clients-list {
+  justify-content: center;
+}
+
+.clients-svg {
+  height: 60px;
+  width: 106px;
+  fill: var(--tripple-colour);
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border: 1px solid var(--focus-colour);
+}
+
+.clients-list-link:hover .clients-svg,
+.clients-list-link:focus .clients-svg {
+  fill: var(--focus-colour);
+}
+
+.clients-list-item {
+  flex-basis: var(--flex-x6);
+  margin-left: var(--primary-margin);
+  margin-top: var(--primary-margin);
+}
+
+.clients-list {
+  margin-left: var(--primary-margin-reverse);
+  margin-top: var(--primary-margin-reverse);
+}
+
+/*========== END CLIENTS ==========*/
 
 /*========== PORTFOLIO BUTTON ==========*/
 
@@ -417,6 +580,14 @@ address {
 
 .portfolio-list-item {
   background: #ffffff;
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .portfolio-list-item {
