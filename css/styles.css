@@ -376,6 +376,7 @@ address {
 .features-title {
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .features-list {
@@ -433,8 +434,8 @@ address {
 .command-list-item-title {
   font-weight: 500;
   line-height: 1.19;
-  /*margin-top: 30px;
-  margin-bottom: 10px;*/
+  /*margin-top: 30px;*/
+  margin-bottom: 10px;
 }
 
 .command-list-item-text {
