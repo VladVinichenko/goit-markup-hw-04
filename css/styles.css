@@ -267,7 +267,7 @@ address {
 }
 
 .footer-text-social {
-  font-family: var(--main-font);
+  font-family: Roboto, sans-serif;
   font-size: var(--main-font);
   line-height: 16px;
   text-transform: uppercase;
