@@ -159,12 +159,12 @@ address {
 /*========== HEADER ==========*/
 .header {
   border-bottom: 1px solid #ececec;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .header-logo {
   margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .header-logo,
@@ -184,6 +184,12 @@ address {
 .navigation-contact {
   margin-left: auto;
   align-items: center;
+}
+
+.menu-item {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .menu-link:hover,
