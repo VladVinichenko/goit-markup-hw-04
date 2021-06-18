@@ -204,7 +204,7 @@ address {
 }
 
 .contact-header-svg {
-  /*height: 12px;*/
+  /* height: 16px;*/
   fill: var(--seconary-colour);
   margin-right: 10px;
   display: flex;
@@ -219,7 +219,7 @@ address {
 }
 /*
 .mail-svg {
-  width: 16px;
+  width: 12px;
 }
 
 .tel-svg {
@@ -384,12 +384,14 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /*
   padding-top: 25px;
   padding-bottom: 25px;
   padding-left: 100px;
   padding-right: 100px;
-
+  */
+  width: 270px;
+  height: 120px;
   background-color: var(--button-background-colour);
   border-radius: 4px;
 
@@ -498,16 +500,17 @@ address {
   border: 1px solid var(--tripple-colour);
   box-sizing: border-box;
   border-radius: 4px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
 }
-
+/*
 .clients-list {
   justify-content: center;
 }
-
+*/
 .clients-svg {
   height: 60px;
   width: 106px;
